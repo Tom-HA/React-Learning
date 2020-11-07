@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Exercise 3 - JavaScript</title>
+        <meta charset='utf-8'>
+        <script>
+            function getText(arr1){
+                var count = 0;
+                for(var i=0; i < arr1.length; i++){
+                    if(arr1[i] == "A") {
+                        count++
+                    }
+                }
+                console.log('"A" was found ' + count + ' times')
+            }
+            getText(['a', 'A', 'tom', 'A', 'A'])
+
+            var arr2 = ['Avi', 23, [1,2, ['A', 'B', ['Hello']]]]
+
+            console.log('The length of "Hello" is: ' + arr2[2][2][2][0].length)
+
+            var arr3 = [{'Name': 'Avi Cohen', 'Age': 30, 'Address': 
+                            {'Street': 'Herzl', 'Num': 23, 'City': 'Tel Aviv', 'Phones':
+                                {'Mobile': '052-1234567', 'Fax': '03-1234567', 'Home': '03-7654321'}}}]
+
+            function getArray(arr3, faxNum){
+                for(var i=0; i < arr3.length; i++) {
+                    if(arr3[i].Address.Phones.Fax == faxNum ){
+                        console.log('Name: ' + arr3[i].Name)
+                        console.log('City: ' + arr3[i].Address.City)
+                    }
+                }
+            }
+            getArray(arr3, '03-1234567')
+            getArray(arr3, '03-1234568')
+
+
+            var students= [{ 'Name': 'Tom',
+                            'ID': 123, 
+                            'Grades': [10, 20, 30, 40],
+                            },
+                            { 'Name': 'Chen',
+                            'ID': 124, 
+                            'Grades': [30, 40, 50],
+                            },
+                            { 'Name': 'Pulki',
+                            'ID': 125, 
+                            'Grades': [10, 20, 30, 100],
+                            }
+                        ]
+                           
+
+            function getStudents(students, grade) {
+                for(var i=0; i < students.length; i++){
+                    for(var j=0; j < students[i].Grades.length; j++){
+                        if(students[i].Grades[j] > grade){
+                            console.log('Grade: ' + students[i].Grades[j] + ' is greater than: ' + grade)
+                        }
+
+                    }
+                }
+            }
+            getStudents(students, 5)
+        </script>
+    </head>
+</html>
