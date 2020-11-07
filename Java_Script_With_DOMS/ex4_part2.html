@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Exercise 4 Part 2- JavaScript With DOMS</title>
+        <meta charset='utf-8'>
+        <script>
+            function hideContent(){
+                document.getElementById("id").style.display = "none"
+                document.getElementById("cc").style.display = "none"
+            }
+            function showContent(){
+                document.getElementById("id").style.display = "block"
+                document.getElementById("cc").style.display = "block"
+            }
+        </script>
+
+    </head>
+    <body>
+        <form>
+            Name: <input type="text" name="Name" id="name" /> <br/>
+            Adult? <br/>
+            <input type="radio" name="adult" id="adult-yes" onclick="showContent()" /> Yes <br/>
+            <input type="radio" name="adult" id="adult-no" onclick="hideContent()"/> No <br/>
+            <span id="id">ID: <input type="text" name="id" > <br/></span> 
+            <span id="cc"> Credit Card <input type="text" > <br/></span>
+            <button>Save</button>
+            
+        </form>
+   </body>
+</html>

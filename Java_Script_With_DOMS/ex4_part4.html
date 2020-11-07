@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Exercise 4 Part 4 - JavaScript With DOMS</title>
+        <meta charset='utf-8'>
+        <script>
+            function validateAndSetBgColor() {
+                var number = document.getElementById("TextBox1").value
+                switch(number) {
+                    case "1":
+                        setBgColor(number)
+                        break;
+                    case "2":
+                        setBgColor(number)
+                        break;
+                    case "3":
+                        setBgColor(number)
+                        break;
+                    case "4":
+                        setBgColor(number)
+                        break;
+                    default:
+                } 
+            }
+
+            var isRed = true;
+            function setBgColor(number) {
+                isRed = !isRed;
+
+                if(isRed){
+                    document.getElementById(number).style.backgroundColor="red"
+                }
+                else {
+                    document.getElementById(number).style.backgroundColor="white"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <table border="1">
+            <tr width="200px" height="100px">
+                <td id="1" width="100px" height="50px">
+                    1
+                </td>
+                <td id="2" width="100px" height="50px">
+                    2
+                </td>
+            </tr>
+            <tr width="200px" height="100px">
+                <td id="3" width="100px" height="50px">
+                    3
+                </td>
+                <td id="4" width="100px" height="50px">
+                    4
+                </td>
+            </tr>
+        </table>
+        <br/><br/>
+        <input id="TextBox1" type="text" name="TextBox1"  /> <br/>
+        <button onclick="validateAndSetBgColor()">Click Me</button>
+    </body>
+</html>

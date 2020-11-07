@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Exercise 4 Part 3- JavaScript With DOMS</title>
+        <meta charset='utf-8'>
+        <script>
+            var isRed = true;
+            var counter = 0;
+            function changeColor() {
+                var obj = document.getElementById('colors');
+                isRed = !isRed;
+
+                if(isRed){
+                    obj.style.backgroundColor = "red"
+                }
+                else {
+                    obj.style.backgroundColor = "blue"
+                }
+                counter++
+                document.getElementById("counter").value = counter
+            }
+        </script>
+
+    </head>
+    <body>
+        <h1>Counter: <input type="text" name="counter" id="counter" value=0></h1>
+        <br/><br/>
+        <div id="colors" style="width: 200px; height: 200px; background-color: red;" onmouseover="changeColor()"></div>
+    </body>
+</html>

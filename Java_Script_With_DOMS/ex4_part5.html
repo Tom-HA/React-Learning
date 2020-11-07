@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Exercise 4 Part 5 - JavaScript With DOMS</title>
+        <meta charset='utf-8'>
+        <script>
+            function addSelectOption() {
+                var option = document.createElement("option");
+                option.value, option.text = document.getElementById("textBox").value
+                var selectBox = document.getElementById("selectBox");
+                selectBox.appendChild(option);
+            }
+        </script>
+    </head>
+    <body>
+        <select name="selectBox" id="selectBox"></select>
+
+        <br/>
+        <input type="text" name="textBox" id="textBox">
+        <br/>
+        <button onclick="addSelectOption()">Click Me</button>
+    </body>
+</html>

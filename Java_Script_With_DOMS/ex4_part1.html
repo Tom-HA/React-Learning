@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Exercise 4 Part 1- JavaScript With DOMS</title>
+        <meta charset='utf-8'>
+        <script>
+            function changeText(){
+                var t1 = document.getElementById('text1')
+                var t2 = document.getElementById('text2')
+                var t1v = t1.value
+                var t2v = t2.value
+                t1.value = t2v
+                t2.value = t1v
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <input id="text1" type="text" value="1" />
+        <input id="text2" type="text" value="2"/>
+        <div>
+            <input type="button" value="Swappy" onclick="changeText()"><br/>
+        </div>
+    </body>
+</html>
