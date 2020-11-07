@@ -1,0 +1,15 @@
+.Grey {
+    background-color: gray;
+    width:200px;
+    height: 200px;
+}
+
+.Green {
+    background-color: green;
+    width:100px;
+    height: 100px;
+}
+
+.White {
+    background-color: white;
+}
